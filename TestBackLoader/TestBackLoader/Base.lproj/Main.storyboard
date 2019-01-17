@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Cy-3c-vgS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="rux-mr-fa9">
+            <objects>
+                <viewController id="4Cy-3c-vgS" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i0z-3e-UWm"/>
+                        <viewControllerLayoutGuide type="bottom" id="1GE-uo-MAU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZXd-Ip-dBA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-tB-jYi">
+                                <rect key="frame" x="137.5" y="230.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FDe-xG-yqH"/>
+                                    <constraint firstAttribute="height" constant="50" id="JQe-7o-rVC"/>
+                                </constraints>
+                                <state key="normal" title="download"/>
+                                <connections>
+                                    <action selector="download:" destination="4Cy-3c-vgS" eventType="touchUpInside" id="m5u-ad-3fs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRx-Jj-paP">
+                                <rect key="frame" x="137.5" y="308.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="RJV-Pu-evp"/>
+                                    <constraint firstAttribute="height" constant="50" id="coa-6I-IP8"/>
+                                </constraints>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="pauseDownlaod:" destination="4Cy-3c-vgS" eventType="touchUpInside" id="7KC-UX-aNw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1In-Sq-VLg">
+                                <rect key="frame" x="137.5" y="384.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FQ2-VT-DX1"/>
+                                    <constraint firstAttribute="width" constant="100" id="Sif-Wa-Zpa"/>
+                                </constraints>
+                                <state key="normal" title="continue"/>
+                                <connections>
+                                    <action selector="continueDownlaod:" destination="4Cy-3c-vgS" eventType="touchUpInside" id="9jj-So-dPg"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jRY-xu-KYa">
+                                <rect key="frame" x="112.5" y="200.5" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GiD-a8-dpo"/>
+                                    <constraint firstAttribute="height" constant="2" id="f3a-gN-yr0"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-Y8-KGX">
+                                <rect key="frame" x="137.5" y="171.5" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="e4p-Nu-bUa"/>
+                                    <constraint firstAttribute="height" constant="21" id="teh-CV-QDR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2156862745" green="0.50196078430000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jRY-xu-KYa" firstAttribute="top" secondItem="CKJ-Y8-KGX" secondAttribute="bottom" constant="8" id="2kO-72-sFg"/>
+                            <constraint firstItem="1In-Sq-VLg" firstAttribute="top" secondItem="sRx-Jj-paP" secondAttribute="bottom" constant="26" id="547-sf-EHZ"/>
+                            <constraint firstItem="sRx-Jj-paP" firstAttribute="centerY" secondItem="ZXd-Ip-dBA" secondAttribute="centerY" id="Fnr-4d-MFF"/>
+                            <constraint firstItem="CKJ-Y8-KGX" firstAttribute="centerX" secondItem="ZXd-Ip-dBA" secondAttribute="centerX" id="Mnn-Or-ca0"/>
+                            <constraint firstItem="1In-Sq-VLg" firstAttribute="centerX" secondItem="ZXd-Ip-dBA" secondAttribute="centerX" id="Mz2-Ld-Swf"/>
+                            <constraint firstItem="AiU-tB-jYi" firstAttribute="centerX" secondItem="ZXd-Ip-dBA" secondAttribute="centerX" id="RrA-s8-WLh"/>
+                            <constraint firstItem="AiU-tB-jYi" firstAttribute="top" secondItem="jRY-xu-KYa" secondAttribute="bottom" constant="28" id="Tfl-su-eHT"/>
+                            <constraint firstItem="sRx-Jj-paP" firstAttribute="centerX" secondItem="ZXd-Ip-dBA" secondAttribute="centerX" id="rmm-n3-Zs1"/>
+                            <constraint firstItem="sRx-Jj-paP" firstAttribute="top" secondItem="AiU-tB-jYi" secondAttribute="bottom" constant="28" id="st1-PJ-cMO"/>
+                            <constraint firstItem="jRY-xu-KYa" firstAttribute="centerX" secondItem="ZXd-Ip-dBA" secondAttribute="centerX" id="vOI-NJ-kOy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NUq-3N-CeF"/>
+                    </view>
+                    <connections>
+                        <outlet property="downloadProgress" destination="jRY-xu-KYa" id="h6H-tX-JcE"/>
+                        <outlet property="progressLabel" destination="CKJ-Y8-KGX" id="KPE-5s-LBi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJM-xK-GhM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="160"/>
+        </scene>
+    </scenes>
+</document>
